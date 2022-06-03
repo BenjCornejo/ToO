@@ -17,33 +17,36 @@ public class Mundo extends World
 
     public Mundo()
     {
-        super(800, 800, 1);
+        super(900, 650, 1);
         backgroundMusic = new GreenfootSound("Intro1.mp3");
         backgroundMusic.playLoop();
 
-        //backgroundMusic.pause();
+        backgroundMusic.pause();
         //backgroundMusic.
     }
     private int numEnemy;
     public Mundo(int nivel)
     {
-        super(800, 800, 1);
+        super(900, 650, 1);
  
         switch(nivel)
         {
         case 0:
         backgroundMusic = new GreenfootSound("Intro1.mp3");
         backgroundMusic.playLoop();
-        backgroundMusic.pause();
+      //  backgroundMusic.pause();
         background = new GreenfootImage("background.jpg");
         background.scale(getWidth(), getHeight());
         setBackground(background);
-        // backgroundMusic.
-        addObject(new Boton(2),getWidth()/2, getHeight()/2);
-        showText("!Jugar!", getWidth()/2, getHeight()/2);
-        addObject(new Boton(0),getWidth()/2, getHeight()/2+150);
-        showText("!Salir!", getWidth()/2, getHeight()/2+150);
-         addObject(new Boton(1),getWidth()/2, getHeight()/2+75);
+
+        
+        addObject(new Boton(2), 400, 150);
+        showText("!Jugar!", 400, 150);
+        addObject(new Boton(3),400, 350);
+        showText("!Dificultad!", 400, 350);
+        addObject(new Boton(4),400, 500);
+        showText("Salir", 400, 500);
+        addObject(new Boton(1),150, 300);     //MOUSE   
        break;
        case 1:
            background = new GreenfootImage("Fondo1.jpg");
@@ -66,4 +69,13 @@ public class Mundo extends World
         int count1 = getObjects(Enemigo.class).size();
         System.out.println(count1);
     }
+    public void velocidad(int vl)
+    {
+        this.vel=vl;
+    }
+    public int dameVelocidad()
+    {
+        return this.vel;
+    }
+    private int vel;
 }

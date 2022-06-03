@@ -21,15 +21,6 @@ public class Jugador extends Actor
     }
     public void ini()
     {
-        if(op==true)
-        {
-               // World w = this.getWorld();
-               // msg = new Message(toString());
-               //  w.addObject(msg, getX(),getY()+45);
-               //  op=false;
-                 System.out.println("x");
-        }
-          System.out.println("x");
     }
     public Jugador(){
 
@@ -71,14 +62,10 @@ public class Jugador extends Actor
     }
     public void  checavida()
     {
-
-  
     }
     
     public void contacto()
     {
-
-      
     }
     
 }

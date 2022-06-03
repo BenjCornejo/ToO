@@ -32,20 +32,28 @@ public class Enemigo extends Jugador
             gfi.scale( 40,40);
             checavida();
     }
+    private int vel;
+    public void velocidad(int vl)
+    {
+        this.vel=vl;
+    }
+    public int dameVelocidad()
+    {
+        return this.vel;
+    }
     public void act()
     {
-                     // getWorld().showText(null, getX(), getY()+45);
-     //   msg.setpos(getX(),getY());
-      //  msg.settext(toString());
-       //      System.out.println("sdcsdcs");
+            
         //ini();
-        
+        int e=15;
+        e = vel+15;
         if(mov==true)
         {Random rand =new Random();
-        this.setLocation(this.getX()+rand.nextInt(15), this.getY()+rand.nextInt(15));
-        this.setLocation(this.getX()-rand.nextInt(15), this.getY()-rand.nextInt(15));
+        this.setLocation(this.getX()+rand.nextInt(e), this.getY()+rand.nextInt(e));
+        this.setLocation(this.getX()-rand.nextInt(e), this.getY()-rand.nextInt(e));
         contacto();
         checavida();}
+      
     }
        public void dañoE(int x)
      {if(canSee(Principal.class))
@@ -63,11 +71,14 @@ public class Enemigo extends Jugador
       int y=x8.getY();
       int ataue=x8.getAtaque();
       dañoE(ataue);
-    }
       
+    }
     }
     private boolean opcion= true;
     private boolean mov=true;
+    /*private setVelocidad(){
+    this.velocidad=
+    }*/
         public void  checavida()
     {
         System.out.println(this.getVida());

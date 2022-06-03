@@ -9,34 +9,36 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Mundo2 extends Mundo
 {
 
-    /**
-     * Constructor for objects of class Mundo2.
-     * 
-     */
     public Mundo2()
     {
     }
-    public Mundo2(int b)
+    public Mundo2(int b,int c)
     {
     super (b);
      setnumEnemy(5);
-        Enemigo p2 = new Enemigo();
+     this.velocidad(c);
+        Enemigo p2 = new Enemigo(); 
+        p2.velocidad(this.dameVelocidad());
         p2.setVida(100);
         p2.setAtaque(50);
         addObject(p2, 20,20);
         Enemigo p3 = new Enemigo();
+         p3.velocidad(this.dameVelocidad());
         p3.setVida(100);
         p3.setAtaque(50);
         addObject(p3, 200,20);
         Enemigo p4 = new Enemigo();
+         p4.velocidad(this.dameVelocidad());
         p4.setVida(100);
         p4.setAtaque(50);
         addObject(p4, 400,20);
         Enemigo p5 = new Enemigo();
+         p5.velocidad(this.dameVelocidad());
         p5.setVida(100);
         p5.setAtaque(50);
         addObject(p5, 20,400);
         Enemigo p6 = new Enemigo();
+         p6.velocidad(this.dameVelocidad());
         p6.setVida(100);
         p6.setAtaque(50);
         addObject(p6, 400,200);
@@ -46,10 +48,12 @@ public class Mundo2 extends Mundo
         Greenfoot.delay(1);
         addObject(p1, 300  ,300 );
          Enemigo p7 = new Enemigo();
+          p7.velocidad(this.dameVelocidad());
         p7.setVida(100);
         p7.setAtaque(50);
         addObject(p7, 500,200);
          Enemigo p8 = new Enemigo();
+          p8.velocidad(this.dameVelocidad());
         p8.setVida(100);
         p8.setAtaque(50);
         addObject(p8, 800,600);
@@ -63,6 +67,6 @@ public class Mundo2 extends Mundo
         int count1 = getObjects(Tumba.class).size();
          System.out.println(count1+"contador");
         if (count1==7)
-        {Greenfoot.setWorld(new Mundo3(3)); 
+        {Greenfoot.setWorld(new Mundo3(3,this.dameVelocidad())); 
         }    }
 }

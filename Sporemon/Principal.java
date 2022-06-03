@@ -69,7 +69,7 @@ public class Principal extends Jugador
         this.setLocation(300,300);
         contv--;
         if (contv==0)
-        {Greenfoot.stop();
+        {Greenfoot.setWorld(new Gameover()); 
         }
      }
     }

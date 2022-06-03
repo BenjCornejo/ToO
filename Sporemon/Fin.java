@@ -15,13 +15,13 @@ public class Fin extends Mundo
      */
     public Fin()
     {
+        super (9);
+          addObject(new Boton(10), 400, 150);
+        showText("Felicidades, has genado", 400, 300);
+        
     }
     public Fin(int f)
     {
-    super (f);
     
-        showText("Felicidades, has genado", getWidth()/2, getHeight()/2);
-        
-        showText("Tu puntuacion es", getWidth()/2, getHeight()/3);
     }
 }
